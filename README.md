@@ -1,13 +1,4 @@
-# Flash-Chat
-Learn to make iOS Apps with [The App Brewery](https://www.appbrewery.co) 📱 | Project Stub | (Swift 4.0/Xcode 9) - Flash Chat App
-
-Beginner: Download the starter project files as .zip and extract the files to your desktop.
-
-Pro: Git clone to your Xcode projects folder.
-
-## Finished App
-![Finished App](https://github.com/londonappbrewery/Images/blob/master/Flash%20Chat.gif)
-
-
-
-Copyright © The App Brewery
+iOS App that allows Users to Registers, Upload Posts, Send Group Messages and Snaps.<br>
+I downloaded the starter Flash-Chat app and Expanded on it greatly.<br>
+All I used was the RegisterVC, LoginVC, and MessagesVC.<br>
+I implemented Firebase and all the Functionality. 
