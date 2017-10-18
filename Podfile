@@ -10,5 +10,8 @@ target 'Flash Chat' do
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
+pod 'Firebase/Core'
+pod 'Firebase/Storage'
+pod 'SDWebImage', '~> 4.0'
 
 end

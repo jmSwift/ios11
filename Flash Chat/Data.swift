@@ -8,8 +8,17 @@
 
 import Foundation
 import Firebase
+import FirebaseStorage
+
+
 
 let DB_BASE = Database.database().reference()
+//Pics
+// Get a reference to the storage service using the default Firebase App
+let storage = Storage.storage()
+
+// Create a storage reference from our storage service
+let storageRef = storage.reference()
 
 class Data{
     static let instance = Data()
@@ -18,7 +27,18 @@ class Data{
     private var _REF_USERS = DB_BASE.child("users")
     private var _REF_GROUPS = DB_BASE.child("groups")
     private var _REF_FEED = DB_BASE.child("feed")
+    private var _REF_POSTS = DB_BASE.child("posts")
     
+    //images
+    private var _REF_POST_IMAGES = storageRef.child("post-pics")
+    
+    var REF_POSTS: DatabaseReference {
+        return _REF_POSTS
+    }
+    
+    var REF_POST_IMAGES: StorageReference{
+        return _REF_POST_IMAGES
+    }
     var REF_BASE: DatabaseReference{
         return _REF_BASE
     }
@@ -70,6 +90,23 @@ class Data{
         
         }
     
+    //new function
+    func getAllMessagesWithPics(desiredGroup: Group, handler: @escaping(_ messagesArray: [Message]) ->()){
+        var groupMessagesArray = [Message]()
+        REF_GROUPS.child(desiredGroup.key).child("messages").observeSingleEvent(of: .value) { (groupMessageSnapshot) in
+            guard let groupMessageSnapshot = groupMessageSnapshot.children.allObjects as? [DataSnapshot] else{return}
+            for groupMessage in groupMessageSnapshot{
+                let content = groupMessage.childSnapshot(forPath: "content").value as! String
+                let senderId = groupMessage.childSnapshot(forPath: "senderId").value as! String
+                let imageUrl = groupMessage.childSnapshot(forPath: "imageUrl").value as! String
+                let groupMessage = Message(content: content, senderId: senderId, imageUrl: imageUrl)
+                groupMessagesArray.append(groupMessage)
+            }
+            handler(groupMessagesArray)
+        }
+        
+    }
+    
     func getUsername(forUID uid:String, handler:@escaping(_ username:String) ->()){
         REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
             guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else{return}
@@ -115,6 +152,40 @@ class Data{
             
         }
     }//end of getIds
+    
+    //get all ids
+    
+    func getAllIds( handler: @escaping (_ uidArray: [String]) -> ()){
+        REF_USERS.observeSingleEvent(of: .value) { (userSnapshot) in
+        var idArray = [String] ()
+        guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else {return}
+            for user in userSnapshot{
+        
+        
+                idArray.append(user.key)
+        
+        
+        
+            }
+        
+        handler(idArray)
+        
+        }
+    }
+    
+    
+    func getEmail (handler:@escaping (_ userEmail: String) -> ()){
+        var currentEmail = String()
+        REF_USERS.observe(.value){(userSnapshot) in
+            guard let userSnapshot = userSnapshot.children.allObjects as? [DataSnapshot] else { return}
+            for user in userSnapshot{
+                let email = user.childSnapshot(forPath: "email").value as! String
+                currentEmail = email
+        
+            }
+            handler(currentEmail)
+        }
+    }//end of func get email
     
     func getEmailsFor(group: Group, handler: @escaping (_ emails: [String])-> ()){
         var emailArray = [String]()
@@ -166,4 +237,15 @@ class Data{
             sendComplete(true)
         }
     }
+    
+    func uploadPost(withMessage message: String, forUID uid:String,forImage imageUrl:String, withGroupKey groupKey:String?, sendComplete: @escaping(_ status: Bool) ->()){
+        if groupKey != nil{
+            REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
+        }else{
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId":uid])
+            sendComplete(true)
+        }
+    }
+   
 }

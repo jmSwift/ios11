@@ -8,6 +8,9 @@ PODS:
   - Firebase/Database (4.1.1):
     - Firebase/Core
     - FirebaseDatabase (= 4.0.2)
+  - Firebase/Storage (4.1.1):
+    - Firebase/Core
+    - FirebaseStorage (= 2.0.1)
   - FirebaseAnalytics (4.0.3):
     - FirebaseCore (~> 4.0)
     - FirebaseInstanceID (~> 2.0)
@@ -26,6 +29,10 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.2):
     - FirebaseCore (~> 4.0)
+  - FirebaseStorage (2.0.1):
+    - FirebaseAnalytics (~> 4.0)
+    - FirebaseCore (~> 4.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleToolboxForMac/DebugUtils (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/Defines (2.1.1)
@@ -43,11 +50,16 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - Firebase/Storage
+  - SDWebImage (~> 4.0)
 
 SPEC CHECKSUMS:
   Firebase: 052c0de688fc87b414996eea13e223dd9fee3fa2
@@ -56,11 +68,13 @@ SPEC CHECKSUMS:
   FirebaseCore: 28def3c643989c97ea5a69ea5000f5fa9902b9fd
   FirebaseDatabase: 4d1a10639a42cae26e094296951b53c689e5e191
   FirebaseInstanceID: c4c7fca62c7b7330caee5da04f19a37ea37bb1c1
+  FirebaseStorage: 661fc1f8d4131891d256b62e82a45ace8b3f0c3b
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
-PODFILE CHECKSUM: f0d785d2ff83cd0858ecc888b64c8e8ff7cd7f34
+PODFILE CHECKSUM: de8b1ca0810b35820484aa691e1aa5479cada7db
 
 COCOAPODS: 1.1.1

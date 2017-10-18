@@ -18,11 +18,17 @@
 		63E28B321B9A337600FBF6E0 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E28B2D1B9A337600FBF6E0 /* RegisterViewController.swift */; };
 		63E28B331B9A337600FBF6E0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E28B2E1B9A337600FBF6E0 /* WelcomeViewController.swift */; };
 		63EBB3051D98004B004175E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63EBB3041D98004B004175E5 /* LaunchScreen.storyboard */; };
+		8220342A1F85F90B00CC5B26 /* PicMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822034291F85F90B00CC5B26 /* PicMessageVC.swift */; };
 		82216AAE1F828A3F003D388E /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82216AAD1F828A3F003D388E /* PostsVC.swift */; };
 		82216AB21F828B06003D388E /* PostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82216AB11F828B06003D388E /* PostsCell.swift */; };
 		8232F4E91F7874A600039F67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8232F4E61F7873B500039F67 /* GoogleService-Info.plist */; };
 		8232F4ED1F787B6D00039F67 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232F4EC1F787B6D00039F67 /* AuthService.swift */; };
 		8232F4EF1F78810500039F67 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232F4EE1F78810500039F67 /* Data.swift */; };
+		82347BC21F94365900888910 /* SnapsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82347BC11F94365900888910 /* SnapsTableViewController.swift */; };
+		82347BC41F943B4F00888910 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82347BC31F943B4F00888910 /* SnapsViewController.swift */; };
+		8249BB571F93E1CF0064F02B /* SelectRecepientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249BB561F93E1CF0064F02B /* SelectRecepientTableViewController.swift */; };
+		8249BB591F93EE690064F02B /* SnapsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8249BB581F93EE690064F02B /* SnapsTableViewCell.swift */; };
+		825D76C31F947AEB00709A19 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825D76C21F947AEB00709A19 /* Post.swift */; };
 		82B620C41F815FC500658948 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B620C31F815FC400658948 /* ShadowView.swift */; };
 		82B620C61F815FD800658948 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B620C51F815FD800658948 /* InsetTextField.swift */; };
 		82B620CA1F81682E00658948 /* NewGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B620C91F81682E00658948 /* NewGroupsVC.swift */; };
@@ -49,11 +55,17 @@
 		63E28B2D1B9A337600FBF6E0 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		63E28B2E1B9A337600FBF6E0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		63EBB3041D98004B004175E5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
+		822034291F85F90B00CC5B26 /* PicMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicMessageVC.swift; sourceTree = "<group>"; };
 		82216AAD1F828A3F003D388E /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		82216AB11F828B06003D388E /* PostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsCell.swift; sourceTree = "<group>"; };
 		8232F4E61F7873B500039F67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8232F4EC1F787B6D00039F67 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		8232F4EE1F78810500039F67 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		82347BC11F94365900888910 /* SnapsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsTableViewController.swift; sourceTree = "<group>"; };
+		82347BC31F943B4F00888910 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		8249BB561F93E1CF0064F02B /* SelectRecepientTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRecepientTableViewController.swift; sourceTree = "<group>"; };
+		8249BB581F93EE690064F02B /* SnapsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsTableViewCell.swift; sourceTree = "<group>"; };
+		825D76C21F947AEB00709A19 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		82B620C31F815FC400658948 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowView.swift; path = ../../../iosApps/groupChat/groupChat/ShadowView.swift; sourceTree = "<group>"; };
 		82B620C51F815FD800658948 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsetTextField.swift; path = ../../../iosApps/groupChat/groupChat/InsetTextField.swift; sourceTree = "<group>"; };
 		82B620C91F81682E00658948 /* NewGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupsVC.swift; sourceTree = "<group>"; };
@@ -143,6 +155,11 @@
 				82216AAD1F828A3F003D388E /* PostsVC.swift */,
 				82216AB11F828B06003D388E /* PostsCell.swift */,
 				82B754E21F83225F00B16DCC /* ProfileVC.swift */,
+				822034291F85F90B00CC5B26 /* PicMessageVC.swift */,
+				8249BB561F93E1CF0064F02B /* SelectRecepientTableViewController.swift */,
+				8249BB581F93EE690064F02B /* SnapsTableViewCell.swift */,
+				82347BC11F94365900888910 /* SnapsTableViewController.swift */,
+				82347BC31F943B4F00888910 /* SnapsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -164,6 +181,7 @@
 			children = (
 				63E28B241B9A335300FBF6E0 /* Message.swift */,
 				82FB64C01F81A86D007FA23F /* Group.swift */,
+				825D76C21F947AEB00709A19 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -329,18 +347,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				63E28B331B9A337600FBF6E0 /* WelcomeViewController.swift in Sources */,
+				82347BC21F94365900888910 /* SnapsTableViewController.swift in Sources */,
 				82F8996A1F8172E70067705D /* UserCell.swift in Sources */,
 				63E28B251B9A335300FBF6E0 /* Message.swift in Sources */,
 				82B754E31F83225F00B16DCC /* ProfileVC.swift in Sources */,
+				8249BB571F93E1CF0064F02B /* SelectRecepientTableViewController.swift in Sources */,
 				82FB64C11F81A86D007FA23F /* Group.swift in Sources */,
 				6321A9E21B94EBE70053D2E7 /* CustomMessageCell.swift in Sources */,
+				82347BC41F943B4F00888910 /* SnapsViewController.swift in Sources */,
+				825D76C31F947AEB00709A19 /* Post.swift in Sources */,
 				63E28B321B9A337600FBF6E0 /* RegisterViewController.swift in Sources */,
+				8220342A1F85F90B00CC5B26 /* PicMessageVC.swift in Sources */,
 				82B620C41F815FC500658948 /* ShadowView.swift in Sources */,
 				82B620C61F815FD800658948 /* InsetTextField.swift in Sources */,
 				82FB64BD1F819FE5007FA23F /* GroupCell.swift in Sources */,
 				63E28B311B9A337600FBF6E0 /* LogInViewController.swift in Sources */,
 				82FB64BF1F81A167007FA23F /* GroupsVC.swift in Sources */,
 				63E28B2F1B9A337600FBF6E0 /* AppDelegate.swift in Sources */,
+				8249BB591F93EE690064F02B /* SnapsTableViewCell.swift in Sources */,
 				63E28B301B9A337600FBF6E0 /* ChatViewController.swift in Sources */,
 				82216AAE1F828A3F003D388E /* PostsVC.swift in Sources */,
 				82B620CA1F81682E00658948 /* NewGroupsVC.swift in Sources */,
